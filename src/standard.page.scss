@@ -1,0 +1,37 @@
+@import "./typography";
+@import "./layout";
+
+@media print {
+
+}
+
+.cv-standard {
+    @extend .flex;
+    @extend .layout-column;
+
+    margin-bottom: 0px;
+
+    .left-content-margin {
+        padding-left: 3rem;
+    }
+
+    .right-content-margin {
+        padding-right: 3rem;
+    }
+
+    .left-flex-column {
+        flex: 0 0 10rem;
+    }
+}
+
+.cv-standard-header {
+    flex: 0 0 1rem;
+}
+
+.cv-standard-content {
+    @extend .flex;
+}
+
+.cv-standard-footer {
+    flex: 0 0 1rem;
+}

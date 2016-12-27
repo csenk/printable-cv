@@ -1,0 +1,12 @@
+<div class="cv-standard">
+    <div class="green white-text cv-standard-header"></div>
+    <div class="cv-standard-content">
+        <chapter
+            v-for="chapter in content.chapters"
+            v-bind:caption="chapter.caption"
+            v-bind:icon="chapter.icon"
+            v-bind:type="chapter.type"
+            v-bind:content="chapter.data" />
+    </div>
+    <div class="grey darken-3 cv-standard-footer"></div>
+</div>

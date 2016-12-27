@@ -1,0 +1,27 @@
+@import "./typography";
+@import "./layout";
+
+.cv-experience {
+
+}
+
+.cv-experience-headline {
+    @extend .layout-row;
+}
+
+.cv-experience-headline__title {
+    @extend .title;
+
+    flex: 0 1 auto;
+}
+
+.cv-experience-headline__place {
+    @extend .caption;
+
+    margin-left: 1rem;
+    flex: 0 1 auto;
+}
+
+.cv-experience__timeframe {
+    @extend .subhead;
+}

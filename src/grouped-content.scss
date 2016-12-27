@@ -1,0 +1,24 @@
+@import "./typography";
+@import "./layout";
+
+.cv-group {
+    @extend .layout-row;
+
+    margin-bottom: 1rem;
+}
+
+.cv-group-caption {
+    @extend .body-1;
+}
+
+.cv-group-content {
+    @extend .layout-column;
+    @extend .flex;
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.cv-group-content--last {
+    border: none;
+}

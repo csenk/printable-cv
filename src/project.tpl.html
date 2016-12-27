@@ -1,0 +1,30 @@
+<div class="cv-project">
+    <div class="valign-wrapper cv-project-headline">
+        <div class="cv-project-headline__title">{{ content.title }}</div>
+        <div class="flex"></div>
+        <div class="valign cv-project-headline__place" v-if="content.place">@{{ content.place }}</div>
+    </div>
+    <div class="green-text cv-project__timeframe">{{ content.start }} - {{ content.end }}</div>
+    <div class="cv-project__description" v-if="content.description">{{ content.description }}</div>
+    <div class="cv-project__separator"></div>
+    <div class="cv-project-detail" v-if="content.customer">
+        <div class="cv-project-detail__name">Kunde</div>
+        <div class="cv-project-detail__value">{{ content.customer }}</div>
+    </div>
+    <div class="cv-project-detail" v-if="content.role">
+        <div class="cv-project-detail__name">Rolle</div>
+        <div class="cv-project-detail__value">{{ content.role }}</div>
+    </div>
+    <div class="cv-project-detail" v-if="content.stack">
+        <div class="cv-project-detail__name">Technologien</div>
+        <div class="cv-project-detail__value">
+            <span v-for="(item, index) in content.stack">
+                <span>{{ item }}</span><span v-if="index < content.stack.length - 1">, </span>
+            </span>
+        </div>
+    </div>
+    <div class="cv-project-detail" v-for="item in content.details">
+            <div class="cv-project-detail__name">{{ item.name }}</div>
+            <div class="cv-project-detail__value">{{ item.value }}</div>
+    </div>
+</div>

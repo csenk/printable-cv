@@ -1,0 +1,43 @@
+@import "./typography";
+@import "./layout";
+
+.cv-project {
+
+}
+
+.cv-project-headline {
+    @extend .layout-row;
+}
+
+.cv-project-headline__title {
+    @extend .title;
+
+    flex: 0 1 auto;
+}
+
+.cv-project-headline__place {
+    @extend .caption;
+
+    margin-left: 1rem;
+    flex: 0 1 auto;
+}
+
+.cv-project__timeframe {
+    @extend .subhead;
+}
+
+.cv-project__description {
+    @extend .caption;
+}
+
+.cv-project__separator {
+    height: 1rem;
+}
+
+.cv-project-detail {
+    @extend .layout-row;
+}
+
+.cv-project-detail__name {
+    flex: 0 0 8rem;
+}

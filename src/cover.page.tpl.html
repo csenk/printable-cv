@@ -1,0 +1,43 @@
+<div class="row cv-cover">
+    <!-- Left sidebar -->
+    <div class="col-xs-4 cv-cover-left-column"> <!-- v-bind:class="style['left-column']" -->
+        <div class="green white-text cv-cover-left-column-header">
+            <h1 class="center-align cv-cover-left-column-header__name">{{ content.name }}</h1>
+            <div class="center-align cv-cover-left-column-header__position">{{ content.position }}</div>
+        </div>
+        <div class="grey darken-3 white-text cv-cover-left-column-content">
+            <div class="center-align">
+                <img class="circle z-depth-2 cv-cover-left-column-content__picture" src="profile.jpg" />
+            </div>
+            <p class="cv-cover-left-column-content__introduction">{{ content.introduction }}</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="col-xs-8 cv-cover-right-column">
+        <div class="green white-text cv-cover-right-column-header valign-wrapper">
+            <div class="cv-cover-right-column-contact valign">
+                <div class="cv-cover-right-column-contact-item valign-wrapper" v-if="content.contact.address">
+                    <i class="valign small material-icons">place</i>
+                    <div class="cv-cover-right-column-contact-item__value valign">{{ content.contact.address.street }}, {{ content.contact.address.zipcode }} {{ content.contact.address.city }}</div>
+                </div>
+                <div class="cv-cover-right-column-contact-item valign-wrapper" v-if="content.contact.mail">
+                    <i class="valign small material-icons">mail</i>
+                    <div class="cv-cover-right-column-contact-item__value valign">{{ content.contact.mail }}</div>
+                </div>
+                <div class="cv-cover-right-column-contact-item valign-wrapper" v-if="content.contact.mobile">
+                    <i class="valign small material-icons">phone</i>
+                    <div class="cv-cover-right-column-contact-item__value valign">{{ content.contact.mobile }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="cv-cover-right-column-content">
+            <chapter
+                v-for="chapter in content.chapters"
+                v-bind:caption="chapter.caption"
+                v-bind:icon="chapter.icon"
+                v-bind:type="chapter.type"
+                v-bind:content="chapter.data" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+@import "./layout";
+
+@media print {
+    .cv-page {
+        height: 100%;
+
+        /* As we print we have pages, use them */
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+
+    .cv-page__sheet {
+        height: 100%;
+
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+    }
+}
+
+@media only screen {
+    .cv-page__sheet {
+        width: 21cm;
+        height: 297mm;
+        margin: 0.5rem auto 1rem auto;
+    }
+}
+
+.cv-page {
+    margin: 0px;
+}
+
+.cv-page__sheet {
+    @extend .layout-column;
+
+    text-align: left;
+}
+
+.cv-page__content {
+    @extend .flex;
+    @extend .layout-column;
+
+    padding: 0 !important;
+}

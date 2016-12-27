@@ -1,0 +1,10 @@
+<div class="cv-chapter">
+    <div class="cv-chapter-headline left-content-margin">
+        <div class="valign-wrapper cv-chapter-headline__icon left-flex-column">
+            <i class="valign small material-icons">{{ icon }}</i>
+        </div>
+        <div class="cv-chapter-headline__title">{{ caption }}</div>
+    </div>
+
+    <component v-bind:is="type" v-bind:content="content" />
+</div>

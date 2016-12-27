@@ -1,0 +1,21 @@
+@import "./typography";
+@import "./layout";
+
+.cv-chapter {
+    margin-top: 2rem;
+}
+
+.cv-chapter-headline {
+    @extend .layout-row;
+
+    margin-bottom: 1rem;
+}
+
+.cv-chapter-headline__icon {
+
+}
+
+.cv-chapter-headline__title {
+    @extend .flex;
+    @extend .headline;
+}

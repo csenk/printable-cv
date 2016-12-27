@@ -1,0 +1,20 @@
+@import "./typography";
+@import "./layout";
+
+.cv-skills {
+    margin: 0;
+}
+
+.cv-skills-item {
+    @extend .layout-row;
+}
+
+.cv-skills-item__name {
+    @extend .body-1;
+
+    flex: 0 1 auto;
+}
+
+.cv-skills-item__value {
+    flex: 0 1 5rem;
+}

@@ -1,0 +1,8 @@
+<div>
+    <div v-for="(group, index) in content" class="cv-group left-content-margin">
+        <div class="cv-group-caption left-flex-column">{{ group.caption }}</div>
+        <div class="cv-group-content right-content-margin" v-bind:class="{ 'cv-group-content--last': index === content.length - 1 }">
+            <component v-bind:is="group.type" v-bind:content="group.data" />
+        </div>
+    </div>
+</div>

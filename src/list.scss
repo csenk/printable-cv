@@ -1,0 +1,13 @@
+@import "./typography";
+
+.cv-list {
+    margin: 0 0 0 1rem;
+
+    list-style-type: disc !important;
+}
+
+.cv-list__item {
+    @extend .body-1;
+
+    list-style-type: disc !important;
+}

@@ -1,0 +1,11 @@
+<ul class="cv-skills">
+    <li v-for="item in content" class="cv-skills-item">
+        <div class="cv-skills-item__name">
+            {{ item.name }}
+        </div>
+        <div class="flex"></div>
+        <div class="cv-skills-item__value progress green lighten-4">
+            <div class="determinate green" v-bind:style="{ width: item.value * 100 + '%' }"></div>
+        </div>
+    </li>
+</ul>

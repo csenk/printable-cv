@@ -1,0 +1,10 @@
+@media print {
+    html, body {
+        height: 100%;
+    }
+
+    // Print background colors
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}
