@@ -1,8 +1,13 @@
 <div class="cv-experience">
-    <div class="valign-wrapper cv-experience-headline">
-        <div class="cv-experience-headline__title">{{ content.title }}</div>
-        <div class="flex"></div>
-        <div class="valign cv-experience-headline__place" v-if="content.place">@{{ content.place }}</div>
+  <div class="valign-wrapper cv-experience-headline">
+    <div class="cv-experience-headline__title">{{ content.title }}</div>
+    <div class="flex"></div>
+    <div class="valign cv-experience-headline__place" v-if="content.place">
+      @{{ content.place }}
     </div>
-    <div class="green-text cv-experience__timeframe">{{ content.start }} - {{ content.end }}</div>
+  </div>
+  <div class="cv-experience-headline__subtitle">{{ content.subtitle }}</div>
+  <div class="green-text cv-experience__timeframe">
+    {{ content.start }} - {{ content.end }}
+  </div>
 </div>
